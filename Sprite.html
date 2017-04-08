@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dome</title>
+    <style>
+/*完成css reset样式 清除原有浏览器默认样式*/        
+        ul{
+            list-style: none;
+        }
+        li h3{
+            font-size: 14px;
+            font-weight: 400;
+        }
+        h3,ul{
+            padding:0;
+            margin: 0;
+        }
+/*定义完整所需样式*/
+        li{
+            display: block;
+            height: 31px;
+            line-height: 31px;
+            overflow: hidden; 
+            border-bottom: 1px solid #dedede;
+        }
+        .cat{
+            width:150px;
+            background-color:#f8f8f8;
+            border: 1px solid #bbb
+        }
+        li i {
+            background: url(./Sprite.png);
+            display:inline;
+            height: 20px;
+            width:30px;
+            float: left;
+            margin: 5px 10px 10px; 
+        }
+        /*通过背景图片不同位置的坐标调用不同的小图标*/
+        .cat-1 i{background-position: 0 0;} 
+        .cat-2 i{background-position: 0 -24px;}
+        .cat-3 i{background-position: 0 -48px;}
+        .cat-4 i{background-position: 0 -72px;}
+        .cat-5 i{background-position: 0 -96px;}
+    </style>
+</head>
+<body>
+    <div class="cat">
+       <ul>
+           <li class="cat-1">
+               <i></i>
+               <h3>服装内衣</h3>
+           </li>
+           <li class="cat-2">
+               <i></i>
+               <h3>鞋包</h3>
+           </li>
+           <li class="cat-3">
+               <i></i>
+               <h3>户外运动</h3>
+           </li>
+           <li class="cat-4">
+               <i></i>
+               <h3>珠宝</h3>
+           </li>
+           <li class="cat-5">
+               <i></i>
+               <h3>手机数码</h3>
+           </li>          
+       </ul> 
+    </div>
+    
+</body>
+</html>

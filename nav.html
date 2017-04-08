@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nav</title>
+    <style>
+        a{
+            text-decoration: none;
+            color: #333 ;
+        }
+        body,ul,li,p{
+            margin:0;
+           padding:0;
+        }
+        li{
+            list-style: none;
+        }
+        /*设置body内字体14px,行高1.5，微软雅黑*/
+        body{
+            font: 14px/1.5 '微软雅黑'；
+        }
+        #nav{
+            background-color:#ccc;
+            height: 50px;
+            line-height: 50px;
+        }
+        #nav > ul > li {
+            float: left;
+            margin-left: 20px;
+            position: relative;
+        }
+        #nav > ul > li > a:hover{
+            background-color:red;
+            color:white;
+        }
+        #nav > ul > li > a{
+            display:block;
+            height: 50PX;
+            padding: 0 10px;
+        }
+         #nav > ul > li:hover .child{
+             display: block;
+         }
+        #nav .child{
+            background-color: #555;
+            position: absolute; 
+            top:50px;
+            left:0;
+            line-height: 1;
+            padding: 10px;
+            display: none;
+        }
+        #nav .child li{
+            margin-top: 10px;
+        }
+/*清除浮动*/       
+        .clearfix:after{
+            content:'';
+            display: block;
+            clear:both;  
+        }
+    </style>
+</head>
+<body>
+    <div id="nav" class="clearfix">
+       <ul>
+           <li>
+               <a href="#">前端</a>
+               <ul class="child">
+                   <li><a href="#">html</a></li>
+                   <li><a href="#">CSS</a></li>
+                   <li><a href="#">javascript</a></li>
+               </ul>
+           </li>
+           <li>
+               <a href="#">服务端</a>
+               <ul class="child">
+                   <li><a href="#">nodeJS</a></li>
+                   <li><a href="#">PHP</a></li>
+                   <li><a href="#">Java</a></li>
+               </ul>
+           </li>
+           <li>
+               <a href="#">开发工具</a>
+           </li>
+           <li>
+               <a href="#">注册</a>
+           </li>
+           <li>
+               <a href="#">登陆</a>
+           </li>
+       </ul> 
+    </div>
+    <P>by ice</P>
+    
+</body>
+</html>
